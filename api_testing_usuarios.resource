@@ -9,6 +9,7 @@ Library    collections
 
 *** Variables ***
 ${TRUE}    true
+${RESPOSTA}    value
 
 
 
@@ -26,7 +27,7 @@ Cadastrar o novo usuário criado na ServeRest
     
     ${body}=    Create Dictionary
     ...    nome=Fulano da Silva
-    ...    email=tocha@hotmail.com
+    ...    email=tocha02@hotmail.com
     ...    password=1234
     ...    administrador=true
     Log    ${body}
@@ -39,9 +40,19 @@ Cadastrar o novo usuário criado na ServeRest
     ...             json=${body}   
 
     Log             message=${resposta.json()}
+   Set Test Variable    ${RESPOSTA}    ${resposta.json()}
+   
 
 
 
 Criar sessão na ServeRest
     ${headers}    Create Dictionary    accept=application/json    content-type=application/json
     Create Session    alias=ServeRest    url=https://serverest.dev     headers=${headers} 
+
+
+
+
+Conferir se o usuário foi cadastrado corretamente
+    Log    ${RESPOSTA} 
+
+    
