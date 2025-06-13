@@ -11,5 +11,5 @@ Resource    api_testing_usuarios.resource
 Cenario 01: Cadastrar um novo usuario na ServerRest
     Criar um novo usuário
     Cadastrar o novo usuário criado na ServeRest
-    # Conferir se o usuário foi cadastrado corretamente
+    Conferir se o usuário foi cadastrado corretamente
 
