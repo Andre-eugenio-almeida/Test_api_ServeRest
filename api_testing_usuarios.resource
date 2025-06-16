@@ -27,7 +27,7 @@ Cadastrar o novo usuário criado na ServeRest
     
     ${body}=    Create Dictionary
     ...    nome=Fulano da Silva
-    ...    email=tocha02@hotmail.com
+    ...    email=tocha03@hotmail.com
     ...    password=1234
     ...    administrador=true
     Log    ${body}
