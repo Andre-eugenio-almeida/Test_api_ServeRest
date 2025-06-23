@@ -53,6 +53,8 @@ Criar sessão na ServeRest
 
 
 Conferir se o usuário foi cadastrado corretamente
-    Log    ${RESPOSTA} 
+    Log    ${RESPOSTA}     
+    
+
 
     
